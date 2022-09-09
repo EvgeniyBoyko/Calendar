@@ -14,14 +14,14 @@
 }
 
 .month {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .year {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
-
+  margin-right: 5px;
   margin-left: 10px;
 }
 
@@ -51,5 +51,20 @@
   cursor: pointer;
 
   border-radius: 5px;
+  background-color: #404040;
+}
+
+.addIvent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  outline: unset;
+  cursor: pointer;
+  border-radius: 50%;
+
+  color: #dddcdd;
   background-color: #404040;
 }

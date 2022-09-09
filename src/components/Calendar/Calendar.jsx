@@ -8,6 +8,8 @@ import NameDay from '../NameDay';
 
 const Calendar = () => {
   const [today, setToday] = useState(moment());
+  const [isOpen, setIsOpen] = useState(false);
+  const [events, setEvents] = useState(null);
 
   const start = today.clone().startOf('month').startOf('week');
 
@@ -17,8 +19,14 @@ const Calendar = () => {
 
   const changeMonthHandler = () => console.log('change month');
 
+  const openEvents = (metod, event) => {
+    console.log('click', metod);
+    setEvents(event);
+  };
+
   return (
     <div>
+      {isOpen ? <div>FORM</div> : null}
       <Controller
         today={today}
         leftHandler={leftHandler}
@@ -26,7 +34,7 @@ const Calendar = () => {
         changeMonthHandler={changeMonthHandler}
       />
       <NameDay />
-      <Grid start={start} />
+      <Grid start={start} openEvents={openEvents} />
     </div>
   );
 };
