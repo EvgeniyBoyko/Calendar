@@ -14,7 +14,7 @@ const Grid = ({ start }) => {
   return (
     <div className={s.grid}>
       {dayArr.map((item) => (
-        <div key={item.format('DDMMYYYY')} className={s.gridItem}>
+        <div key={item.unix()} className={s.gridItem}>
           <div className={s.dayItem}>
             {!isCurrentDay(item) && item.format('D')}
             {isCurrentDay(item) && <div className={s.currentDay}>{item.format('D')}</div>}

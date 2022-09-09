@@ -2,7 +2,7 @@ import React from 'react';
 
 import s from './Controller.module.css';
 
-const Controller = ({ today }) => {
+const Controller = ({ today, leftHandler, rightHandler, changeMonthHandler }) => {
   return (
     <div className={s.ControllerBox}>
       <div className={s.monthBox}>
@@ -10,9 +10,15 @@ const Controller = ({ today }) => {
         <span className={s.year}>{today.format('YYYY')}</span>
       </div>
       <div className={s.DatePickerBox}>
-        <button className={s.button}>&lt;</button>
-        <button className={s.button}>&gt;</button>
-        <button className={s.DatePicker}>&#128197;</button>
+        <button className={s.button} onClick={leftHandler}>
+          &lt;
+        </button>
+        <button className={s.button} onClick={rightHandler}>
+          &gt;
+        </button>
+        <button className={s.DatePicker} onClick={changeMonthHandler}>
+          &#128197;
+        </button>
       </div>
     </div>
   );

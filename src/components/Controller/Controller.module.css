@@ -27,7 +27,6 @@
 
 .DatePickerBox {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -35,15 +34,22 @@
   width: 30px;
   height: 30px;
 
+  margin-right: 5px;
+  outline: unset;
+  cursor: pointer;
+  border-radius: 5px;
+
   color: #dddcdd;
-  background-color: #1e1f21;
+  background-color: #404040;
 }
 
 .DatePicker {
   width: 30px;
   height: 30px;
 
-  border: 1px solid #dddcdd;
-  border-radius: 4px;
-  background-color: #1e1f21;
+  outline: unset;
+  cursor: pointer;
+
+  border-radius: 5px;
+  background-color: #404040;
 }
