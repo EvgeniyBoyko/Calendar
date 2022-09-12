@@ -2,10 +2,10 @@ import React from 'react';
 
 import s from './Controller.module.css';
 
-const Controller = ({ today, leftHandler, rightHandler, changeMonthHandler }) => {
+const Controller = ({ today, leftHandler, rightHandler, changeMonthHandler, setOpen }) => {
   return (
     <div className={s.ControllerBox}>
-      <button type="button" className={s.addIvent}>
+      <button type="button" className={s.addIvent} onClick={() => setOpen(true)}>
         &#43;
       </button>
       <div className={s.DatePickerBox}>

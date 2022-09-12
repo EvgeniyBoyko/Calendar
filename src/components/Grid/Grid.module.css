@@ -31,3 +31,23 @@
   background-color: red;
   border-radius: 50%;
 }
+
+.list {
+  list-style: none;
+  position: relative;
+  padding-left: 4px;
+}
+
+.list_item_btn {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 150px;
+  text-align: left;
+  border: unset;
+  background: unset;
+  color: #dddddd;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
